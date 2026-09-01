@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * Oracle Database
  * Username : bank_user
- * Password : bank123
+ * Password : your_password
  * Database : XE
  * Host     : localhost
  * Port     : 1521
@@ -36,7 +36,7 @@ public class BankingManagementSystem {
             "bank_user";
 
     static final String DB_PASSWORD =
-            "bank123";
+            "your_password";
 
 
     // =====================================================
