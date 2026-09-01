@@ -109,7 +109,7 @@ Before running the application, install/configure:
 Create an Oracle user:
 
 ```sql
-CREATE USER bank_user IDENTIFIED BY bank123;
+CREATE USER bank_user IDENTIFIED BY your_password;
 
 GRANT CONNECT, RESOURCE TO bank_user;
 ```
@@ -117,7 +117,7 @@ GRANT CONNECT, RESOURCE TO bank_user;
 Connect to the database:
 
 ```sql
-CONNECT bank_user/bank123
+CONNECT bank_user/your_password
 ```
 
 Create the required tables and sequences according to your database configuration.
@@ -143,36 +143,14 @@ Example for Windows Command Prompt:
 ```cmd
 set DB_URL=jdbc:oracle:thin:@localhost:1521:XE
 set DB_USER=bank_user
-set DB_PASSWORD=bank123
+set DB_PASSWORD=your_password
 ```
 
 Do not commit database passwords or other credentials to a public GitHub repository.
 
 ## Compile
 
-If the Oracle JDBC driver is available as `ojdbc14.jar`, compile using:
-
-```cmd
-javac -cp ".;path\to\ojdbc14.jar" BankingManagementSystem.java
-```
-
-Example:
-
-```cmd
-javac -cp ".;D:\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar" BankingManagementSystem.java
-```
-
 ## Run
-
-```cmd
-java -cp ".;path\to\ojdbc14.jar" BankingManagementSystem
-```
-
-Example:
-
-```cmd
-java -cp ".;D:\app\oracle\product\10.2.0\server\jdbc\lib\ojdbc14.jar" BankingManagementSystem
-```
 
 ## Sample Workflow
 
